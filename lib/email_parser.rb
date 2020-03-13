@@ -14,7 +14,7 @@ class EmailAddressParser
   end
 
   def parse
-    self.each do |email_addresses|
+    self.split do |email_addresses|
       EMAILS << email_addresses
     end
   end
