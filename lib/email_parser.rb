@@ -10,12 +10,12 @@ class EmailAddressParser
   EMAILS = []
 
   def initialize(email_addresses)
-    @email_addresses = email_addresses
+    @email_addresses = emails
   end
 
   def parse
     self.split do |email_addresses|
-      EMAILS << email_addresses
+      EMAILS << emails
     end
   end
   
