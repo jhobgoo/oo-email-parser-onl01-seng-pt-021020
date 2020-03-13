@@ -7,9 +7,6 @@ class EmailAddressParser
   
   attr_accessor :email_addresses
   
-  data_from_csv = @csv_data
-  data_from_space_delimited = @delimited_data
-  
   EMAILS = []
 
   def initialize(email_addresses)
@@ -17,12 +14,8 @@ class EmailAddressParser
   end
 
   def parse
-    # Split the CSV data into an array of individual rows.
-    rows = csv_data.split("\n")
-    # For each row, let's collect a Person instance based on the data
-    people = rows.collect do |row|
-      # Split the row into 3 parts, name, age, company, at the ", "
-      data = row.split(", ")
+    self.each do |email_addresses|
+      EMAILS << email_addresses
     end
   end
   
